@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context="com.example.tdsm.paintdemoapplication.MainActivity" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="8">
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/curtain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/process_menu_open"
+                    android:layout_width="30dp"
+                    android:layout_height="100dp"
+                    android:layout_centerVertical="true"/>
+
+            <RelativeLayout
+                android:id="@+id/process_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/menu_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/chooseButton"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:text="原始图片"/>
+
+                    <Button
+                        android:id="@+id/drawButton"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:text="开始选取"/>
+
+                    <Button
+                        android:id="@+id/saveButton"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:text="目标图片" />
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:text="选择位置" />
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:text="开始修复"  />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/process_menu_close"
+                    android:layout_width="30dp"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@+id/menu_item"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+
+
+            <Button
+                android:id="@+id/collection_open"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/collection_close"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/mask_ok"
+                android:background="@drawable/ok"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="60dp"
+                android:layout_marginLeft="50dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/mask_cancel"
+                android:background="@drawable/cancel"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50dp"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
